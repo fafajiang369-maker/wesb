@@ -1,0 +1,11 @@
+{
+  "name": "seaglow-marine-lighting",
+  "version": "1.0.0",
+  "description": "SeaGlow marine lighting marketing site with admin backend.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {}
+}
