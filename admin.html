@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SeaGlow Admin Panel</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="admin-body">
+    <header class="admin-header">
+      <div>
+        <h1>SeaGlow Admin Panel</h1>
+        <p>Manage marine lighting products, images, and videos.</p>
+      </div>
+      <a class="secondary" href="index.html">Back to site</a>
+    </header>
+
+    <main class="admin-main">
+      <section class="admin-card">
+        <h2>Add New Product</h2>
+        <form id="product-form" class="product-form">
+          <label>
+            Product name
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            Short description
+            <textarea name="description" rows="3" required></textarea>
+          </label>
+          <label>
+            Image URL
+            <input type="url" name="image" placeholder="https://" />
+          </label>
+          <label>
+            Video URL (MP4 or embedded link)
+            <input type="url" name="video" placeholder="https://" />
+          </label>
+          <label>
+            Category
+            <select name="category">
+              <option value="Underwater">Underwater</option>
+              <option value="Deck & Cabin">Deck & Cabin</option>
+              <option value="Dock & Marina">Dock & Marina</option>
+              <option value="Smart Control">Smart Control</option>
+            </select>
+          </label>
+          <label>
+            Highlight
+            <input type="text" name="highlight" placeholder="e.g. 3000 lumens" />
+          </label>
+          <button class="primary" type="submit">Save Product</button>
+        </form>
+      </section>
+
+      <section class="admin-card">
+        <div class="admin-list-header">
+          <h2>Current Products</h2>
+          <button id="reset-products" class="secondary" type="button">Reset to Demo Data</button>
+        </div>
+        <div id="admin-product-list" class="admin-product-list"></div>
+      </section>
+    </main>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
